@@ -3,4 +3,29 @@ git add *
 git commit -m "注释"
 修改配置，将git地址与用户名称输入
 git remote add origin https://github.com/sssst1118/-.git
-git push -u origin master
+git push -u origin maste 
+
+
+当你修改了仓库内的文件名后无法上传，通常是因为 Git 没有正确跟踪文件的重命名操作：
+一、修改前
+可以直接 git mv 命名重命名文件
+# 使用 git mv 重命名文件（替代手动 mv/rename）
+git mv old_name.txt new_name.txt
+
+# 提交更改
+git commit -m "Rename file: old_name.txt -> new_name.txt"
+git push origin master
+
+二、已经修改了
+# 1. 查看状态（会显示 deleted 和 untracked）
+git status
+
+# 2. 暂存删除操作（旧文件名）
+git rm old_name.txt
+
+# 3. 暂存新文件
+git add new_name.txt
+
+# 4. 提交并推送
+git commit -m "Rename file: old_name.txt -> new_name.txt"
+git push origin master
