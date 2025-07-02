@@ -1,0 +1,6 @@
+git init
+git add *
+git commit -m "注释"
+修改配置，将git地址与用户名称输入
+git remote add origin https://github.com/sssst1118/-.git
+git push -u origin master
