@@ -29,3 +29,8 @@ git add new_name.txt
 # 4. 提交并推送
 git commit -m "Rename file: old_name.txt -> new_name.txt"
 git push origin master
+
+# 查看log
+git log --name-status
+# 查看远程仓库，确认文件已更新
+git ls-remote --heads origin  # 查看远程分支
